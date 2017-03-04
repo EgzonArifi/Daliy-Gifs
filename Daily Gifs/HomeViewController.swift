@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Alamofire
 
 class HomeViewController: UIViewController {
+
+    let gifsModel = [DailyGifsModel]()
 
     override func viewDidLoad() {
         super.viewDidLoad()

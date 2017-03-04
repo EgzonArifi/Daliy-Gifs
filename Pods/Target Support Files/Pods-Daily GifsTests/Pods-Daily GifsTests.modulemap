@@ -1,0 +1,6 @@
+framework module Pods_Daily_GifsTests {
+  umbrella header "Pods-Daily GifsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
