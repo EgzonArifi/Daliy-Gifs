@@ -16,6 +16,18 @@
 		777BC8F61E6B468F0049959F /* Daily_GifsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777BC8F51E6B468F0049959F /* Daily_GifsTests.swift */; };
 		777BC9011E6B468F0049959F /* Daily_GifsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777BC9001E6B468F0049959F /* Daily_GifsUITests.swift */; };
 		777BC9131E6B4C630049959F /* WishlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777BC9121E6B4C630049959F /* WishlistViewController.swift */; };
+		777BC9201E6B53F40049959F /* DailyGifsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777BC9141E6B53F40049959F /* DailyGifsModel.swift */; };
+		777BC9211E6B53F40049959F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777BC9151E6B53F40049959F /* Data.swift */; };
+		777BC9221E6B53F40049959F /* Downsized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777BC9161E6B53F40049959F /* Downsized.swift */; };
+		777BC9231E6B53F40049959F /* DownsizedSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777BC9171E6B53F40049959F /* DownsizedSmall.swift */; };
+		777BC9241E6B53F40049959F /* FixedHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777BC9181E6B53F40049959F /* FixedHeight.swift */; };
+		777BC9251E6B53F40049959F /* FixedHeightDownsampled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777BC9191E6B53F40049959F /* FixedHeightDownsampled.swift */; };
+		777BC9261E6B53F40049959F /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777BC91A1E6B53F40049959F /* Image.swift */; };
+		777BC9271E6B53F40049959F /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777BC91B1E6B53F40049959F /* Meta.swift */; };
+		777BC9281E6B53F40049959F /* Original.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777BC91C1E6B53F40049959F /* Original.swift */; };
+		777BC9291E6B53F40049959F /* OriginalMp4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777BC91D1E6B53F40049959F /* OriginalMp4.swift */; };
+		777BC92A1E6B53F40049959F /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777BC91E1E6B53F40049959F /* Pagination.swift */; };
+		777BC92B1E6B53F40049959F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777BC91F1E6B53F40049959F /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +63,18 @@
 		777BC9001E6B468F0049959F /* Daily_GifsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily_GifsUITests.swift; sourceTree = "<group>"; };
 		777BC9021E6B468F0049959F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		777BC9121E6B4C630049959F /* WishlistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishlistViewController.swift; sourceTree = "<group>"; };
+		777BC9141E6B53F40049959F /* DailyGifsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyGifsModel.swift; sourceTree = "<group>"; };
+		777BC9151E6B53F40049959F /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		777BC9161E6B53F40049959F /* Downsized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Downsized.swift; sourceTree = "<group>"; };
+		777BC9171E6B53F40049959F /* DownsizedSmall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownsizedSmall.swift; sourceTree = "<group>"; };
+		777BC9181E6B53F40049959F /* FixedHeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixedHeight.swift; sourceTree = "<group>"; };
+		777BC9191E6B53F40049959F /* FixedHeightDownsampled.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixedHeightDownsampled.swift; sourceTree = "<group>"; };
+		777BC91A1E6B53F40049959F /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		777BC91B1E6B53F40049959F /* Meta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
+		777BC91C1E6B53F40049959F /* Original.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Original.swift; sourceTree = "<group>"; };
+		777BC91D1E6B53F40049959F /* OriginalMp4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginalMp4.swift; sourceTree = "<group>"; };
+		777BC91E1E6B53F40049959F /* Pagination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		777BC91F1E6B53F40049959F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +156,18 @@
 		777BC90E1E6B4BC10049959F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				777BC9141E6B53F40049959F /* DailyGifsModel.swift */,
+				777BC9151E6B53F40049959F /* Data.swift */,
+				777BC9161E6B53F40049959F /* Downsized.swift */,
+				777BC9171E6B53F40049959F /* DownsizedSmall.swift */,
+				777BC9181E6B53F40049959F /* FixedHeight.swift */,
+				777BC9191E6B53F40049959F /* FixedHeightDownsampled.swift */,
+				777BC91A1E6B53F40049959F /* Image.swift */,
+				777BC91B1E6B53F40049959F /* Meta.swift */,
+				777BC91C1E6B53F40049959F /* Original.swift */,
+				777BC91D1E6B53F40049959F /* OriginalMp4.swift */,
+				777BC91E1E6B53F40049959F /* Pagination.swift */,
+				777BC91F1E6B53F40049959F /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -301,9 +337,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				777BC8E31E6B468F0049959F /* SearchViewController.swift in Sources */,
+				777BC9211E6B53F40049959F /* Data.swift in Sources */,
 				777BC9131E6B4C630049959F /* WishlistViewController.swift in Sources */,
 				777BC8DF1E6B468F0049959F /* AppDelegate.swift in Sources */,
+				777BC92B1E6B53F40049959F /* User.swift in Sources */,
+				777BC9251E6B53F40049959F /* FixedHeightDownsampled.swift in Sources */,
+				777BC9201E6B53F40049959F /* DailyGifsModel.swift in Sources */,
 				777BC8E11E6B468F0049959F /* HomeViewController.swift in Sources */,
+				777BC9281E6B53F40049959F /* Original.swift in Sources */,
+				777BC9221E6B53F40049959F /* Downsized.swift in Sources */,
+				777BC9271E6B53F40049959F /* Meta.swift in Sources */,
+				777BC9291E6B53F40049959F /* OriginalMp4.swift in Sources */,
+				777BC9241E6B53F40049959F /* FixedHeight.swift in Sources */,
+				777BC92A1E6B53F40049959F /* Pagination.swift in Sources */,
+				777BC9261E6B53F40049959F /* Image.swift in Sources */,
+				777BC9231E6B53F40049959F /* DownsizedSmall.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
