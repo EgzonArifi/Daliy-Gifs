@@ -9,13 +9,40 @@
 import UIKit
 import Alamofire
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    let gifsModel = [DailyGifsModel]()
+    @IBOutlet weak var tableView: UITableView!
+    var gifsModel = DailyGifsModel.init(fromDictionary: [:])
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    }  
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+
+        tableView.delegate = self
+        tableView.dataSource = self
+
+        Network.sharedInstance.loadHomeData { (DailyGifsModel) in
+            self.gifsModel = DailyGifsModel
+            self.tableView.reloadData()
+        }
+    }
+    // MARK: UITableView DataSource and Delegate
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.gifsModel.data.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "Cell") as UITableViewCell!
+
+        cell.textLabel?.text = self.gifsModel.data[indexPath.row].bitlyGifUrl
+
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You tapped cell number \(indexPath.row).")
+    }
 }
 
