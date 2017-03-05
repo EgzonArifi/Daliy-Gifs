@@ -17,7 +17,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "HomeGifTableViewCell")
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 600
+        tableView.register(UINib(nibName: "HomeGifTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeGifTableViewCell")
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -30,18 +32,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     // MARK: UITableView DataSource and Delegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.gifsModel.data.count
+        return self.gifsModel.datasModel.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell:HomeGifTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "HomeGifTableViewCell") as! HomeGifTableViewCell!
-
-        cell.textLabel?.text = self.gifsModel.data[indexPath.row].bitlyGifUrl
-        let imageData = try! Data(fromDictionary: Bundle.main.url(forResource: "adventure-time", withExtension: "gif")!)
-        cell.gifImageView.image = UIImage.gif(data: imageData)
-
-        return cell
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "HomeGifTableViewCell") as! HomeGifTableViewCell!
+        cell?.configureCell(model:gifsModel.datasModel[indexPath.row])
+        return cell!
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -10,7 +10,7 @@ import Alamofire
 
 class DailyGifsModel{
 
-	var data : [Data]!
+	var datasModel : [Data]!
 	var meta : Meta!
 	var pagination : Pagination!
 
@@ -19,11 +19,11 @@ class DailyGifsModel{
 	 * Instantiate the instance using the passed dictionary values to set the properties values
 	 */
 	init(fromDictionary dictionary: [String:Any]){
-		data = [Data]()
+		datasModel = [Data]()
 		if let dataArray = dictionary["data"] as? [[String:Any]]{
 			for dic in dataArray{
 				let value = Data(fromDictionary: dic)
-				data.append(value)
+				datasModel.append(value)
 			}
 		}
 		if let metaData = dictionary["meta"] as? [String:Any]{

@@ -7,21 +7,19 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HomeGifTableViewCell: UITableViewCell {
 
     @IBOutlet weak var gifImageView: UIImageView!
+    @IBOutlet weak var titleGif: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-    }
-
-    func setGif(gifURL:String) {
-        
+    func configureCell(model: Data)  {
+        self.gifImageView.sd_setImage(with: URL(string: (model.images.original.url)!))
+        self.titleGif.text = (model.slug)!
     }
 }
