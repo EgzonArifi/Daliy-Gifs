@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeGifTableViewCell" rowHeight="269" id="KGk-i7-Jjw" customClass="HomeGifTableViewCell" customModule="Daily_Gifs" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="269"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="268.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zYB-ab-A28">
+                        <rect key="frame" x="8" y="20" width="304" height="228"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="304" id="qXO-Jd-wff"/>
+                            <constraint firstAttribute="height" constant="228" id="z77-mr-dYw"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="zYB-ab-A28" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="0j1-k0-jXp"/>
+                    <constraint firstAttribute="bottom" secondItem="zYB-ab-A28" secondAttribute="bottom" constant="20.5" id="dBY-rg-HdE"/>
+                    <constraint firstAttribute="trailing" secondItem="zYB-ab-A28" secondAttribute="trailing" constant="8" id="f3h-jO-9Cw"/>
+                    <constraint firstItem="zYB-ab-A28" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="pjV-nQ-qt2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="gifImageView" destination="zYB-ab-A28" id="4mz-v2-Gx8"/>
+            </connections>
+            <point key="canvasLocation" x="33" y="176.5"/>
+        </tableViewCell>
+    </objects>
+</document>

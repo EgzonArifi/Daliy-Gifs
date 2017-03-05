@@ -30,6 +30,8 @@
 		777BC92B1E6B53F40049959F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777BC91F1E6B53F40049959F /* User.swift */; };
 		777BC92F1E6C4EB50049959F /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777BC92E1E6C4EB50049959F /* Network.swift */; };
 		777BC9321E6C83A70049959F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777BC9311E6C83A70049959F /* Constants.swift */; };
+		777BC9391E6C897B0049959F /* HomeGifTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777BC9371E6C897B0049959F /* HomeGifTableViewCell.swift */; };
+		777BC93A1E6C897B0049959F /* HomeGifTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 777BC9381E6C897B0049959F /* HomeGifTableViewCell.xib */; };
 		F799C58298BA2EF009C8E919 /* Pods_Daily_Gifs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95F0E302B2EE8D08A585C1C /* Pods_Daily_Gifs.framework */; };
 		F7BD1606E8396B706FFAC1E9 /* Pods_Daily_GifsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB2F60899B128CE08985D5 /* Pods_Daily_GifsUITests.framework */; };
 		FAF86EAB2DE29E331847C89A /* Pods_Daily_GifsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E26AF0E5A2FE53B39E946D /* Pods_Daily_GifsTests.framework */; };
@@ -84,6 +86,8 @@
 		777BC91F1E6B53F40049959F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		777BC92E1E6C4EB50049959F /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		777BC9311E6C83A70049959F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		777BC9371E6C897B0049959F /* HomeGifTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeGifTableViewCell.swift; sourceTree = "<group>"; };
+		777BC9381E6C897B0049959F /* HomeGifTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeGifTableViewCell.xib; sourceTree = "<group>"; };
 		9A27814BA66FE67C36D50A5B /* Pods-Daily GifsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily GifsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Daily GifsTests/Pods-Daily GifsTests.release.xcconfig"; sourceTree = "<group>"; };
 		9C57E11CAADE1A64C0151AA8 /* Pods-Daily Gifs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily Gifs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Daily Gifs/Pods-Daily Gifs.debug.xcconfig"; sourceTree = "<group>"; };
 		A1011C7AEC45A2A9E190BA27 /* Pods-Daily GifsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily GifsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Daily GifsUITests/Pods-Daily GifsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -239,6 +243,8 @@
 		777BC92C1E6C4E570049959F /* Home Cell */ = {
 			isa = PBXGroup;
 			children = (
+				777BC9371E6C897B0049959F /* HomeGifTableViewCell.swift */,
+				777BC9381E6C897B0049959F /* HomeGifTableViewCell.xib */,
 			);
 			name = "Home Cell";
 			sourceTree = "<group>";
@@ -391,6 +397,7 @@
 				777BC8EB1E6B468F0049959F /* LaunchScreen.storyboard in Resources */,
 				777BC8E81E6B468F0049959F /* Assets.xcassets in Resources */,
 				777BC8E61E6B468F0049959F /* Main.storyboard in Resources */,
+				777BC93A1E6C897B0049959F /* HomeGifTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,6 +560,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				777BC9391E6C897B0049959F /* HomeGifTableViewCell.swift in Sources */,
 				777BC8E31E6B468F0049959F /* SearchViewController.swift in Sources */,
 				777BC9211E6B53F40049959F /* Data.swift in Sources */,
 				777BC9131E6B4C630049959F /* WishlistViewController.swift in Sources */,

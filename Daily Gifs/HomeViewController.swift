@@ -17,7 +17,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "HomeGifTableViewCell")
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -35,9 +35,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "Cell") as UITableViewCell!
+        let cell:HomeGifTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "HomeGifTableViewCell") as! HomeGifTableViewCell!
 
         cell.textLabel?.text = self.gifsModel.data[indexPath.row].bitlyGifUrl
+        let imageData = try! Data(fromDictionary: Bundle.main.url(forResource: "adventure-time", withExtension: "gif")!)
+        cell.gifImageView.image = UIImage.gif(data: imageData)
 
         return cell
     }

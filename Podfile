@@ -9,7 +9,6 @@ target 'Daily Gifs' do
   pod 'RealmSwift'
   pod 'RxSwift',    '~> 3.0'
   pod 'RxCocoa',    '~> 3.0'
-  pod 'SwiftGifOrigin', '~> 1.6.1'
 
   target 'Daily GifsTests' do
     inherit! :search_paths
