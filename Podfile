@@ -9,7 +9,6 @@ target 'Daily Gifs' do
   pod 'RealmSwift'
   pod 'RxSwift',    '~> 3.0'
   pod 'RxCocoa',    '~> 3.0'
-  pod 'SwiftyGif'
   pod 'SDWebImage', '~>3.8'
 
   target 'Daily GifsTests' do
