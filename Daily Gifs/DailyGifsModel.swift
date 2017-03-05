@@ -33,5 +33,4 @@ class DailyGifsModel{
 			pagination = Pagination(fromDictionary: paginationData)
 		}
 	}
-
 }
