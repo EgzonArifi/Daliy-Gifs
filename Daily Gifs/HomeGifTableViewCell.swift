@@ -21,4 +21,7 @@ class HomeGifTableViewCell: UITableViewCell {
 
     }
 
+    func setGif(gifURL:String) {
+        
+    }
 }

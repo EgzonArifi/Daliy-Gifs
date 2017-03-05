@@ -12,6 +12,10 @@ PODS:
   - RxSwift (3.2.0)
   - RxTest (3.2.0):
     - RxSwift (~> 3.0)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - SwiftyGif (3.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
@@ -20,6 +24,8 @@ DEPENDENCIES:
   - RxCocoa (~> 3.0)
   - RxSwift (~> 3.0)
   - RxTest (~> 3.0)
+  - SDWebImage (~> 3.8)
+  - SwiftyGif
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
@@ -29,7 +35,9 @@ SPEC CHECKSUMS:
   RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   RxTest: 85fdd6f753e8e62635a58d37bbdd3ce7d5abbef3
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SwiftyGif: d6b4d63de2a2a5134d8b54ba5719837319d77ef0
 
-PODFILE CHECKSUM: 643315b8ab27b19714ee0949d6c4259079a144c0
+PODFILE CHECKSUM: 59807c5406e37651f1cc56eac77c69df7aabbc7c
 
 COCOAPODS: 1.1.1
