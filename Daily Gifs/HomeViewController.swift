@@ -13,7 +13,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @IBOutlet weak var tableView: UITableView!
     var gifsModel = DailyGifsModel.init(fromDictionary: [:])
-
+    var loadedGifs = 0
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,8 +23,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         tableView.delegate = self
         tableView.dataSource = self
-
-        Network.sharedInstance.loadHomeData { (DailyGifsModel) in
+        loadMore()
+    }
+    func loadMore() {
+        loadedGifs += 70
+        Network.sharedInstance.loadHomeData(loadGifs: loadedGifs) { (DailyGifsModel) in
             self.gifsModel = DailyGifsModel
             self.tableView.reloadData()
         }
