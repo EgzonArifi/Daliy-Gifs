@@ -15,6 +15,8 @@ PODS:
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
+  - UIActivityIndicator-for-SDWebImage (1.2):
+    - SDWebImage (~> 3.7)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
@@ -24,6 +26,7 @@ DEPENDENCIES:
   - RxSwift (~> 3.0)
   - RxTest (~> 3.0)
   - SDWebImage (~> 3.8)
+  - UIActivityIndicator-for-SDWebImage
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
@@ -34,7 +37,8 @@ SPEC CHECKSUMS:
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   RxTest: 85fdd6f753e8e62635a58d37bbdd3ce7d5abbef3
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  UIActivityIndicator-for-SDWebImage: 7bf7ebbf0ed1747dedc0d6e949c4603a6d0f9e0c
 
-PODFILE CHECKSUM: a40219da4f79a9cda8e0bf8ec361a9cb56284886
+PODFILE CHECKSUM: 9304f93ca3d893eb5b00ae7e7c79faa84bc1e688
 
 COCOAPODS: 1.1.1

@@ -19,7 +19,9 @@ class HomeGifTableViewCell: UITableViewCell {
     }
 
     func configureCell(model: Data)  {
+
         self.gifImageView.sd_setImage(with: URL(string: (model.images.fixedHeightSmall.url)!))
+
         self.titleGif.text = (model.slug)!
     }
 }
