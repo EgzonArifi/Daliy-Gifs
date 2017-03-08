@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.4.0)
+  - ESTabBarController-swift (2.2)
   - Realm (2.4.3):
     - Realm/Headers (= 2.4.3)
   - Realm/Headers (2.4.3)
@@ -15,21 +16,20 @@ PODS:
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
-  - UIActivityIndicator-for-SDWebImage (1.2):
-    - SDWebImage (~> 3.7)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
+  - ESTabBarController-swift
   - RealmSwift
   - RxBlocking (~> 3.0)
   - RxCocoa (~> 3.0)
   - RxSwift (~> 3.0)
   - RxTest (~> 3.0)
   - SDWebImage (~> 3.8)
-  - UIActivityIndicator-for-SDWebImage
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  ESTabBarController-swift: c9abf50cbde98ad10732867ec9fbb5169661d844
   Realm: e08d60b0048ccccd3949c8c28a92c4db5712d7e9
   RealmSwift: 30d49739ccb3385d201242736ca4dda56aec9dfc
   RxBlocking: ec8ed471ba77b4fb98a2d60f1f8419b0b46eaa23
@@ -37,8 +37,7 @@ SPEC CHECKSUMS:
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   RxTest: 85fdd6f753e8e62635a58d37bbdd3ce7d5abbef3
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
-  UIActivityIndicator-for-SDWebImage: 7bf7ebbf0ed1747dedc0d6e949c4603a6d0f9e0c
 
-PODFILE CHECKSUM: 9304f93ca3d893eb5b00ae7e7c79faa84bc1e688
+PODFILE CHECKSUM: 4fbf3bccab693c0b1aeafbd59b3bb3ee55a863cf
 
 COCOAPODS: 1.1.1
