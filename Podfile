@@ -10,7 +10,7 @@ target 'Daily Gifs' do
   pod 'RxSwift',    '~> 3.0'
   pod 'RxCocoa',    '~> 3.0'
   pod 'SDWebImage', '~>3.8'
-  pod 'ESTabBarController-swift'
+  pod 'RAMAnimatedTabBarController', "~> 2.0.13"
 
   target 'Daily GifsTests' do
     inherit! :search_paths
