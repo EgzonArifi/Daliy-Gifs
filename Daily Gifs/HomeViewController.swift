@@ -17,6 +17,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationController?.hidesNavigationBarHairline = true
+
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 600
 
