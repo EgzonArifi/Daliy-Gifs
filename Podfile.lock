@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (4.4.0)
+  - ChameleonFramework/Default (2.1.0)
+  - ChameleonFramework/Swift (2.1.0):
+    - ChameleonFramework/Default
   - RAMAnimatedTabBarController (2.0.13)
   - Realm (2.4.3):
     - Realm/Headers (= 2.4.3)
@@ -19,6 +22,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
+  - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - RAMAnimatedTabBarController (~> 2.0.13)
   - RealmSwift
   - RxBlocking (~> 3.0)
@@ -27,8 +31,18 @@ DEPENDENCIES:
   - RxTest (~> 3.0)
   - SDWebImage (~> 3.8)
 
+EXTERNAL SOURCES:
+  ChameleonFramework:
+    :git: https://github.com/ViccAlexander/Chameleon.git
+
+CHECKOUT OPTIONS:
+  ChameleonFramework:
+    :commit: acc480fbe023c6e5fe40f68593f4a70a8c4c7ad5
+    :git: https://github.com/ViccAlexander/Chameleon.git
+
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   RAMAnimatedTabBarController: 2510f3b66954c3f77ea1042a35d34df8f5f3b604
   Realm: e08d60b0048ccccd3949c8c28a92c4db5712d7e9
   RealmSwift: 30d49739ccb3385d201242736ca4dda56aec9dfc
@@ -38,6 +52,6 @@ SPEC CHECKSUMS:
   RxTest: 85fdd6f753e8e62635a58d37bbdd3ce7d5abbef3
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: 5099b98b500f817451807b6763619b997ee72a0a
+PODFILE CHECKSUM: 80b6f25cba2f5b676f49837efd71ee3af8a1a326
 
 COCOAPODS: 1.1.1

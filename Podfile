@@ -11,6 +11,7 @@ target 'Daily Gifs' do
   pod 'RxCocoa',    '~> 3.0'
   pod 'SDWebImage', '~>3.8'
   pod 'RAMAnimatedTabBarController', "~> 2.0.13"
+  pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
 
   target 'Daily GifsTests' do
     inherit! :search_paths
