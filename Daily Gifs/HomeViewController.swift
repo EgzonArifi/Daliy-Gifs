@@ -7,13 +7,12 @@
 //
 
 import UIKit
-import Alamofire
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     var gifsModel = DailyGifsModel.init(fromDictionary: [:])
-    var loadedGifs = 0
+    var viewModel = DailyGifsViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,8 +29,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         loadMore()
     }
     func loadMore() {
-        loadedGifs += 70
-        Network.sharedInstance.loadHomeData(loadGifs: loadedGifs) { (DailyGifsModel) in
+        viewModel.loadHomeData() { (DailyGifsModel) in
             self.gifsModel = DailyGifsModel
             self.tableView.reloadData()
         }
