@@ -19,6 +19,7 @@ PODS:
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
+  - Skeleton (0.1.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
@@ -30,6 +31,7 @@ DEPENDENCIES:
   - RxSwift (~> 3.0)
   - RxTest (~> 3.0)
   - SDWebImage (~> 3.8)
+  - Skeleton
 
 EXTERNAL SOURCES:
   ChameleonFramework:
@@ -51,7 +53,8 @@ SPEC CHECKSUMS:
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   RxTest: 85fdd6f753e8e62635a58d37bbdd3ce7d5abbef3
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  Skeleton: b76249b7d6a73a9913e164c8030647a3e005c700
 
-PODFILE CHECKSUM: 80b6f25cba2f5b676f49837efd71ee3af8a1a326
+PODFILE CHECKSUM: 843f77ebb7918d6745461ca4cc1565ae61fdefe3
 
 COCOAPODS: 1.1.1
