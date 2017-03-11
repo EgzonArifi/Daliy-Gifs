@@ -12,8 +12,8 @@ target 'Daily Gifs' do
   pod 'SDWebImage', '~>3.8'
   pod 'RAMAnimatedTabBarController', "~> 2.0.13"
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
-  pod 'Skeleton'
-
+  pod 'UIScrollView-InfiniteScroll', '~> 1.0.0'
+  
   target 'Daily GifsTests' do
     inherit! :search_paths
     # Pods for testing

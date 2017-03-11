@@ -18,7 +18,9 @@ class HomeHeaderCell: UITableViewCell {
         self.avatarImageView.setIndicatorStyle(.gray)
 
         if (model.user != nil) {
-            self.avatarImageView.sd_setImage(with: URL(string: (model.user.avatarUrl!)))
+            self.avatarImageView.sd_setImage(with: URL(string: (model.user.avatarUrl!)), placeholderImage: UIImage.init(named: "me_1"))
+        } else {
+            self.avatarImageView.image = UIImage.init(named: "me_1")
         }
         
         self.usernameLabel.text = (model.username)!

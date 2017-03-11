@@ -37,6 +37,8 @@
 		77E2CD4C1E70B80C003B3202 /* HomeHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77E2CD4A1E70B80C003B3202 /* HomeHeaderCell.xib */; };
 		77E2CD501E720361003B3202 /* TabbarCustomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2CD4F1E720361003B3202 /* TabbarCustomization.swift */; };
 		77E2CD521E740876003B3202 /* DailyGifsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2CD511E740876003B3202 /* DailyGifsViewModel.swift */; };
+		77E2CD551E741663003B3202 /* HomeSkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2CD531E741663003B3202 /* HomeSkeletonCell.swift */; };
+		77E2CD561E741663003B3202 /* HomeSkeletonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77E2CD541E741663003B3202 /* HomeSkeletonCell.xib */; };
 		F799C58298BA2EF009C8E919 /* Pods_Daily_Gifs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95F0E302B2EE8D08A585C1C /* Pods_Daily_Gifs.framework */; };
 		F7BD1606E8396B706FFAC1E9 /* Pods_Daily_GifsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB2F60899B128CE08985D5 /* Pods_Daily_GifsUITests.framework */; };
 		FAF86EAB2DE29E331847C89A /* Pods_Daily_GifsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E26AF0E5A2FE53B39E946D /* Pods_Daily_GifsTests.framework */; };
@@ -99,6 +101,8 @@
 		77E2CD4A1E70B80C003B3202 /* HomeHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeHeaderCell.xib; sourceTree = "<group>"; };
 		77E2CD4F1E720361003B3202 /* TabbarCustomization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarCustomization.swift; sourceTree = "<group>"; };
 		77E2CD511E740876003B3202 /* DailyGifsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyGifsViewModel.swift; sourceTree = "<group>"; };
+		77E2CD531E741663003B3202 /* HomeSkeletonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSkeletonCell.swift; sourceTree = "<group>"; };
+		77E2CD541E741663003B3202 /* HomeSkeletonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeSkeletonCell.xib; sourceTree = "<group>"; };
 		9A27814BA66FE67C36D50A5B /* Pods-Daily GifsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily GifsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Daily GifsTests/Pods-Daily GifsTests.release.xcconfig"; sourceTree = "<group>"; };
 		9C57E11CAADE1A64C0151AA8 /* Pods-Daily Gifs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily Gifs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Daily Gifs/Pods-Daily Gifs.debug.xcconfig"; sourceTree = "<group>"; };
 		A1011C7AEC45A2A9E190BA27 /* Pods-Daily GifsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily GifsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Daily GifsUITests/Pods-Daily GifsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -261,6 +265,8 @@
 				777BC9381E6C897B0049959F /* HomeGifTableViewCell.xib */,
 				77E2CD491E70B80C003B3202 /* HomeHeaderCell.swift */,
 				77E2CD4A1E70B80C003B3202 /* HomeHeaderCell.xib */,
+				77E2CD531E741663003B3202 /* HomeSkeletonCell.swift */,
+				77E2CD541E741663003B3202 /* HomeSkeletonCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -433,6 +439,7 @@
 				777BC8E81E6B468F0049959F /* Assets.xcassets in Resources */,
 				777BC8E61E6B468F0049959F /* Main.storyboard in Resources */,
 				777BC93A1E6C897B0049959F /* HomeGifTableViewCell.xib in Resources */,
+				77E2CD561E741663003B3202 /* HomeSkeletonCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,6 +617,7 @@
 				777BC9221E6B53F40049959F /* Downsized.swift in Sources */,
 				777BC92F1E6C4EB50049959F /* Network.swift in Sources */,
 				777BC9271E6B53F40049959F /* Meta.swift in Sources */,
+				77E2CD551E741663003B3202 /* HomeSkeletonCell.swift in Sources */,
 				777BC9291E6B53F40049959F /* OriginalMp4.swift in Sources */,
 				777BC9241E6B53F40049959F /* FixedHeight.swift in Sources */,
 				777BC92A1E6B53F40049959F /* Pagination.swift in Sources */,
@@ -779,7 +787,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.egzonarifi.Daily-Gifs";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Daily Gifs/Daily Gifs-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Daily Gifs/Daily Gifs-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -801,7 +809,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.egzonarifi.Daily-Gifs";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Daily Gifs/Daily Gifs-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Daily Gifs/Daily Gifs-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

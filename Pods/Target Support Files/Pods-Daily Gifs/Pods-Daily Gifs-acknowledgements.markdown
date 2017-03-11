@@ -619,9 +619,11 @@ THE SOFTWARE.
 
 
 
-## Skeleton
+## UIScrollView-InfiniteScroll
 
-Copyright (c) 2017 gonzalonunez <gonzi@tcpmiami.com>
+The MIT License (MIT)
+
+Copyright (c) 2013-2015 Andrei Mihailov
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
