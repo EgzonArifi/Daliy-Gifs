@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 
 class DailyGifsViewModel: NSObject {
-    var limit = 200
+    var limit = 300
     var offset = 0
     var datasModel : [Data]!
 
@@ -34,9 +34,10 @@ class DailyGifsViewModel: NSObject {
             case .failure(let error):
                 print(error)
                 completion(false)
+                self.offset -= 300
             }
         }
-        offset += 80
+        offset += 300
     }
     func numberOfSection() -> Int {
         if isEmpty() {

@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="305"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="305"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="304.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="992-hE-895">
@@ -26,7 +26,7 @@
                             <constraint firstAttribute="width" constant="320" id="aIH-hX-Kx0"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I3j-0t-Vq4" customClass="GradientContainerView" customModule="Skeleton">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I3j-0t-Vq4">
                         <rect key="frame" x="8" y="242" width="282" height="8"/>
                         <color key="backgroundColor" red="0.96875482800000001" green="0.96886354679999998" blue="0.96869212390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -34,11 +34,11 @@
                             <constraint firstAttribute="width" constant="282" id="kqN-cG-2or"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ov1-hw-zkQ" customClass="GradientContainerView" customModule="Skeleton">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ov1-hw-zkQ">
                         <rect key="frame" x="8" y="258" width="199" height="8"/>
                         <color key="backgroundColor" red="0.96875482800000001" green="0.96886354679999998" blue="0.96869212390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xgK-qB-APa" customClass="GradientContainerView" customModule="Skeleton">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xgK-qB-APa">
                         <rect key="frame" x="8" y="274" width="140" height="8"/>
                         <color key="backgroundColor" red="0.96875482800000001" green="0.96886354679999998" blue="0.96869212390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>

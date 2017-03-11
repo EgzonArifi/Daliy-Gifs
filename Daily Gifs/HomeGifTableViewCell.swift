@@ -21,7 +21,7 @@ class HomeGifTableViewCell: UITableViewCell {
     func configureCell(model: Data)  {
         self.gifImageView.setShowActivityIndicator(true)
         self.gifImageView.setIndicatorStyle(.gray)
-        self.gifImageView.sd_setImage(with: URL(string: (model.images.fixedWidth.url)!))
+        self.gifImageView.sd_setImage(with: URL(string: (model.images.original.url)!))
         self.titleGif.text = (model.slug)!
     }
 }

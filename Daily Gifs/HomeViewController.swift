@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AMScrollingNavbar
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -16,8 +15,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = DailyGifsViewModel()
-        //        self.navigationController?.hidesNavigationBarHairline = true
 
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 600
@@ -29,7 +26,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.reloadData()
+
         loadMore()
         tableView.addInfiniteScroll { (tableView) -> Void in
             self.loadMore()
