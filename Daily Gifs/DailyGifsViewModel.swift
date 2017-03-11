@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 
 class DailyGifsViewModel: NSObject {
-    var limit = 80
+    var limit = 200
     var offset = 0
     var datasModel : [Data]!
 
@@ -39,10 +39,24 @@ class DailyGifsViewModel: NSObject {
         offset += 80
     }
     func numberOfSection() -> Int {
-       return datasModel!.count
+        if isEmpty() {
+            return 2
+        }
+        return datasModel!.count
     }
     func dataModel(atIndex: Int) -> Data {
         return datasModel[atIndex]
     }
-
+    func isEmpty() -> Bool {
+        if  datasModel.count > 0 {
+            return false
+        }
+        return true
+    }
+    func timeAgo(dateString: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let myDate = dateFormatter.date(from: dateString)!
+        return timeAgoSince(myDate)
+    }
 }

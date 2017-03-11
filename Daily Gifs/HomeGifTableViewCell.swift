@@ -12,6 +12,7 @@ class HomeGifTableViewCell: UITableViewCell {
 
     @IBOutlet weak var gifImageView: UIImageView!
     @IBOutlet weak var titleGif: UILabel!
+    @IBOutlet weak var timeAgo: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -22,8 +22,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NZ9-uo-aA0">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="568" id="HLM-tv-SbE"/>
+                                    <constraint firstAttribute="width" constant="320" id="Hnc-BB-5FG"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="9pv-A4-QxB" id="W6b-1L-Tdp"/>
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="Cai-gP-TQt"/>
@@ -32,10 +36,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NZ9-uo-aA0" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="ROK-0f-nU7"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="NZ9-uo-aA0" secondAttribute="bottom" id="Tn5-qx-mLA"/>
-                            <constraint firstAttribute="trailing" secondItem="NZ9-uo-aA0" secondAttribute="trailing" id="n0F-dT-6rL"/>
-                            <constraint firstItem="NZ9-uo-aA0" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="xlr-Hp-JQK"/>
+                            <constraint firstItem="NZ9-uo-aA0" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="ASc-my-7I0"/>
+                            <constraint firstAttribute="trailing" secondItem="NZ9-uo-aA0" secondAttribute="trailing" id="E0W-NQ-bdN"/>
+                            <constraint firstAttribute="bottom" secondItem="NZ9-uo-aA0" secondAttribute="bottom" id="Usz-Wa-gkT"/>
+                            <constraint firstItem="NZ9-uo-aA0" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="yoR-GU-UiB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="iAg-3D-0C5"/>
@@ -82,7 +86,7 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Find" image="find" selectedImage="find" id="cPa-gy-q4n" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                    <tabBarItem key="tabBarItem" title="Find" image="find" selectedImage="find_1" id="cPa-gy-q4n" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <connections>
                             <outlet property="animation" destination="qig-Yi-wgc" id="ymX-CF-SrW"/>
                         </connections>
@@ -106,7 +110,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favorites" image="favor" selectedImage="favor" id="rXh-3C-eMr" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                    <tabBarItem key="tabBarItem" title="Favorites" image="favor" selectedImage="favor_1" id="rXh-3C-eMr" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <connections>
                             <outlet property="animation" destination="Hgv-eK-gfa" id="qYN-A5-Ii8"/>
                         </connections>
@@ -130,7 +134,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="me" id="BKX-j8-4lo" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="me" selectedImage="me_1" id="BKX-j8-4lo" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <connections>
                             <outlet property="animation" destination="SU7-Am-a1p" id="VEf-Gc-3hn"/>
                         </connections>
@@ -141,16 +145,17 @@
             </objects>
             <point key="canvasLocation" x="768" y="1742"/>
         </scene>
-        <!--Animated Tab Bar Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" customClass="RAMAnimatedTabBarController" customModule="RAMAnimatedTabBarController" sceneMemberID="viewController">
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="qb3-Fw-Mzh" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
@@ -173,7 +178,7 @@
                         </connections>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="rKw-oA-efv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="rKw-oA-efv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -190,9 +195,13 @@
     </scenes>
     <resources>
         <image name="favor" width="23" height="23"/>
+        <image name="favor_1" width="23" height="23"/>
         <image name="find" width="23" height="23"/>
+        <image name="find_1" width="23" height="23"/>
         <image name="home" width="23" height="23"/>
         <image name="home_1" width="23" height="23"/>
         <image name="me" width="23" height="23"/>
+        <image name="me_1" width="23" height="23"/>
     </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

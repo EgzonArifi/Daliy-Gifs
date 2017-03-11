@@ -7,15 +7,17 @@
 //
 
 import UIKit
+import AMScrollingNavbar
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     var viewModel = DailyGifsViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.navigationController?.hidesNavigationBarHairline = true
+        viewModel = DailyGifsViewModel()
+        //        self.navigationController?.hidesNavigationBarHairline = true
 
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 600
@@ -27,12 +29,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.reloadData()
         loadMore()
         tableView.addInfiniteScroll { (tableView) -> Void in
             self.loadMore()
         }
     }
-
     func loadMore() {
         viewModel.loadHomeData { (Bool) in
             self.tableView.reloadData()
@@ -48,14 +50,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return self.viewModel.numberOfSection()
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if self.viewModel.datasModel.count == 0 {
+        if self.viewModel.isEmpty() {
             return 305
         }
         return UITableViewAutomaticDimension
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        if self.viewModel.datasModel.count == 0 {
+        if self.viewModel.isEmpty() {
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HomeSkeletonCell.self), for: indexPath) as! HomeSkeletonCell
 
             return cell
@@ -63,6 +65,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         else {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "HomeGifTableViewCell") as! HomeGifTableViewCell!
             cell?.configureCell(model:self.viewModel.dataModel(atIndex: indexPath.section))
+            cell?.timeAgo.text = self.viewModel.timeAgo(dateString:self.viewModel.dataModel(atIndex: indexPath.row).trendingDatetime)
             cell?.selectionStyle = UITableViewCellSelectionStyle.none
             return cell!
         }
@@ -82,5 +85,5 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped cell number \(indexPath.row).")
     }
-
+    
 }
