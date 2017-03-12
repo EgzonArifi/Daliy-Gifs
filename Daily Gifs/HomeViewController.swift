@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -21,8 +23,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         tableView.register(UINib(nibName: "HomeGifTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeGifTableViewCell")
         tableView.register(UINib(nibName: "HomeHeaderCell", bundle: nil), forCellReuseIdentifier: "HomeHeaderCell")
-        let nib = UINib(nibName: String(describing: HomeSkeletonCell.self), bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: String(describing: HomeSkeletonCell.self))
+        tableView.register(UINib(nibName: String(describing: HomeSkeletonCell.self), bundle: nil),
+                           forCellReuseIdentifier: String(describing: HomeSkeletonCell.self))
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -64,6 +66,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell?.configureCell(model:self.viewModel.dataModel(atIndex: indexPath.section))
             cell?.timeAgo.text = self.viewModel.timeAgo(dateString:self.viewModel.dataModel(atIndex: indexPath.row).trendingDatetime)
             cell?.selectionStyle = UITableViewCellSelectionStyle.none
+
+            cell?.shareButton.rx.tap
+                .debounce(0.0, scheduler: MainScheduler.instance)
+                .subscribe(onNext: { [unowned self] in
+                    self.shareGif(gifUrl: self.viewModel.dataModel(atIndex: indexPath.row).images.fixedWidthSmall.url)
+                }).addDisposableTo((cell?.rx_reusableDisposeBag)!)
+
             return cell!
         }
     }
@@ -82,5 +91,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped cell number \(indexPath.row).")
     }
-    
+    func shareGif(gifUrl: String) -> Void {
+        let shareURL: NSURL = NSURL(string: "\(gifUrl)")!
+        let shareData: NSData = NSData(contentsOf: shareURL as URL)!
+        let firstActivityItem: Array = [shareData]
+        let activityViewController:UIActivityViewController = UIActivityViewController(activityItems: firstActivityItem, applicationActivities: nil)
+        self.present(activityViewController, animated: true, completion: nil)
+    }
 }

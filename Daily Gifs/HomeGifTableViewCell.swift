@@ -7,13 +7,22 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class HomeGifTableViewCell: UITableViewCell {
 
     @IBOutlet weak var gifImageView: UIImageView!
     @IBOutlet weak var titleGif: UILabel!
     @IBOutlet weak var timeAgo: UILabel!
+    @IBOutlet weak var shareButton: UIButton!
     
+    private (set) var rx_reusableDisposeBag = DisposeBag()
+    override func prepareForReuse() {
+        rx_reusableDisposeBag = DisposeBag()
+        super.prepareForReuse()
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
