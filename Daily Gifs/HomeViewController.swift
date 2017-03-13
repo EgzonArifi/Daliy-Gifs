@@ -68,7 +68,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell?.selectionStyle = UITableViewCellSelectionStyle.none
 
             cell?.shareButton.rx.tap
-                .debounce(0.0, scheduler: MainScheduler.instance)
+                //.debounce(0.0, scheduler: MainScheduler.instance)
                 .subscribe(onNext: { [unowned self] in
                     self.shareGif(gifUrl: self.viewModel.dataModel(atIndex: indexPath.row).images.fixedWidthSmall.url)
                 }).addDisposableTo((cell?.rx_reusableDisposeBag)!)

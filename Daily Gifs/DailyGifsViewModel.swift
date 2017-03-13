@@ -13,7 +13,8 @@ class DailyGifsViewModel: NSObject {
     var limit = 300
     var offset = 0
     var datasModel : [Data]!
-
+//    private(set) var trendingDatetime: String
+    
     override init() {
         datasModel = [Data]()
     }
