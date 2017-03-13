@@ -9,5 +9,13 @@
 import UIKit
 
 class SearchViewModel: NSObject {
+    var categories = [String]()
 
+    override init() {
+        categories = ["Trending","Cats","Fun","Music","Random"]
+    }
+    func numberOfRows() -> Int {
+        return categories.count
+    }
+    
 }

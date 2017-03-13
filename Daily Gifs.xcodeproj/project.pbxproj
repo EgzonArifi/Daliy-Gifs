@@ -238,13 +238,12 @@
 		777BC90F1E6B4BD30049959F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				77884F211E773C8400993F21 /* Storyboards */,
 				777BC8E01E6B468F0049959F /* HomeViewController.swift */,
 				777BC8E21E6B468F0049959F /* SearchViewController.swift */,
 				777BC9121E6B4C630049959F /* WishlistViewController.swift */,
 				77884F1C1E77399B00993F21 /* Search Cells */,
 				777BC92C1E6C4E570049959F /* Home Cells */,
-				777BC8E41E6B468F0049959F /* Main.storyboard */,
-				777BC8E91E6B468F0049959F /* LaunchScreen.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -319,6 +318,15 @@
 				77884F1D1E7739B200993F21 /* CategoriesCell.swift */,
 			);
 			name = "Search Cells";
+			sourceTree = "<group>";
+		};
+		77884F211E773C8400993F21 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				777BC8E41E6B468F0049959F /* Main.storyboard */,
+				777BC8E91E6B468F0049959F /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 		F805BBF46CB1CD0220D5BD0A /* Frameworks */ = {
