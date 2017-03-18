@@ -69,68 +69,30 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CategoriesCell" rowHeight="141" id="NG0-Kk-yfC" customClass="CategoriesCell" customModule="Daily_Gifs" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CategoriesCell" rowHeight="141" id="NG0-Kk-yfC" customClass="CategoriesCell" customModule="Daily_Gifs" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="141"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NG0-Kk-yfC" id="IS5-LK-cWF">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m8T-Tz-beD">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="140.5"/>
-                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2Rg-iO-Bp5">
-                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="140.5"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                        <subviews>
-                                                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F9f-z0-zhj">
-                                                                <rect key="frame" x="0.0" y="0.0" width="320" height="140.5"/>
-                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="6VA-of-Uyw">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="140.5"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                </view>
-                                                                <vibrancyEffect>
-                                                                    <blurEffect style="light"/>
-                                                                </vibrancyEffect>
-                                                            </visualEffectView>
-                                                        </subviews>
-                                                    </view>
-                                                    <blurEffect style="dark"/>
-                                                </visualEffectView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Work" translatesAutoresizingMaskIntoConstraints="NO" id="v8H-j5-JUh">
-                                                    <rect key="frame" x="8" y="0.0" width="163" height="140"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="163" id="XP5-wW-6yn"/>
-                                                        <constraint firstAttribute="height" constant="140" id="xkt-bv-CLk"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5c-tw-NhN">
-                                                    <rect key="frame" x="179" y="0.0" width="133" height="136.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5c-tw-NhN">
+                                                    <rect key="frame" x="8" y="0.0" width="271" height="137"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.040000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="m8T-Tz-beD" secondAttribute="trailing" id="0CS-bw-nCT"/>
-                                                <constraint firstItem="v8H-j5-JUh" firstAttribute="top" secondItem="IS5-LK-cWF" secondAttribute="top" id="8Kn-4O-cqJ"/>
-                                                <constraint firstAttribute="bottom" secondItem="h5c-tw-NhN" secondAttribute="bottom" constant="4" id="EuD-AV-ssO"/>
-                                                <constraint firstItem="m8T-Tz-beD" firstAttribute="leading" secondItem="IS5-LK-cWF" secondAttribute="leading" id="Fgo-DV-yPG"/>
-                                                <constraint firstAttribute="bottom" secondItem="v8H-j5-JUh" secondAttribute="bottom" id="ILo-DZ-RXU"/>
+                                                <constraint firstAttribute="bottom" secondItem="h5c-tw-NhN" secondAttribute="bottom" constant="3" id="EuD-AV-ssO"/>
                                                 <constraint firstAttribute="trailing" secondItem="h5c-tw-NhN" secondAttribute="trailing" constant="8" id="IyT-SR-qEN"/>
-                                                <constraint firstItem="v8H-j5-JUh" firstAttribute="leading" secondItem="IS5-LK-cWF" secondAttribute="leading" constant="8" id="P96-KH-M9h"/>
                                                 <constraint firstItem="h5c-tw-NhN" firstAttribute="top" secondItem="IS5-LK-cWF" secondAttribute="top" id="SsE-hM-sVT"/>
-                                                <constraint firstAttribute="bottom" secondItem="m8T-Tz-beD" secondAttribute="bottom" id="UwI-mY-olg"/>
-                                                <constraint firstItem="h5c-tw-NhN" firstAttribute="leading" secondItem="v8H-j5-JUh" secondAttribute="trailing" constant="8" id="cY4-O6-H5L"/>
-                                                <constraint firstItem="h5c-tw-NhN" firstAttribute="leading" secondItem="v8H-j5-JUh" secondAttribute="trailing" constant="8" id="kr2-6x-F6w"/>
-                                                <constraint firstItem="m8T-Tz-beD" firstAttribute="top" secondItem="IS5-LK-cWF" secondAttribute="top" id="nrl-eI-Smy"/>
+                                                <constraint firstItem="h5c-tw-NhN" firstAttribute="leading" secondItem="IS5-LK-cWF" secondAttribute="leading" constant="8" id="jXL-dC-BWq"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
-                                            <outlet property="categoryImage" destination="v8H-j5-JUh" id="atD-ai-fEy"/>
                                             <outlet property="categoryNameLabel" destination="h5c-tw-NhN" id="lfT-fz-8Vo"/>
                                         </connections>
                                     </tableViewCell>
@@ -281,7 +243,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Work" width="375" height="360"/>
         <image name="favor" width="23" height="23"/>
         <image name="favor_1" width="23" height="23"/>
         <image name="find" width="23" height="23"/>
