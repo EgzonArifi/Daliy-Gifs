@@ -13,8 +13,7 @@ class DailyGifsViewModel: NSObject {
     var limit = 300
     var offset = 0
     var datasModel : [Data]!
-//    private(set) var trendingDatetime: String
-    
+
     override init() {
         datasModel = [Data]()
     }
@@ -35,10 +34,31 @@ class DailyGifsViewModel: NSObject {
             case .failure(let error):
                 print(error)
                 completion(false)
-                self.offset -= 300
+                self.offset -= self.limit + 1
             }
         }
-        offset += 300
+        offset += limit + 1
+    }
+    func loadSearchHomeData(category: String, completion: @escaping (Bool) -> Void) {
+        Alamofire.request(SEARCH_URL+"&q=\(category .replacingOccurrences(of: " ", with: "+"))&limit=\(limit)&offset=\(offset)").validate().responseJSON { response in
+            switch response.result {
+            case .success:
+                var newDatasModel = [Data]()
+                if let dataArray = (response.result.value as! [String : Any])["data"] as? [[String:Any]]{
+                    for dic in dataArray{
+                        let value = Data(fromDictionary: dic)
+                        newDatasModel.append(value)
+                    }
+                }
+                self.datasModel.append(contentsOf: newDatasModel)
+                completion(true)
+            case .failure(let error):
+                print(error)
+                completion(false)
+                self.offset -= self.limit + 1
+            }
+        }
+        offset += limit + 1
     }
     func numberOfSection() -> Int {
         if isEmpty() {
@@ -56,9 +76,15 @@ class DailyGifsViewModel: NSObject {
         return true
     }
     func timeAgo(dateString: String) -> String {
+        if dateString.isEmpty {
+            return ""
+        }
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        let myDate = dateFormatter.date(from: dateString)!
-        return timeAgoSince(myDate)
+        let myDate = dateFormatter.date(from: dateString)
+        if myDate == nil {
+            return ""
+        }
+        return timeAgoSince(myDate!)
     }
 }

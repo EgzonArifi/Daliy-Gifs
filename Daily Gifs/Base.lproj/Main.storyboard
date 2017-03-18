@@ -11,7 +11,7 @@
         <!--Home-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="HomeViewController" customModule="Daily_Gifs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9pv-A4-QxB" customClass="HomeViewController" customModule="Daily_Gifs" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -41,9 +41,7 @@
                             <constraint firstItem="NZ9-uo-aA0" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="yoR-GU-UiB"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="iAg-3D-0C5">
-                        <barButtonItem key="rightBarButtonItem" image="icon-Search" id="fGm-ey-xco"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Home" id="iAg-3D-0C5"/>
                     <connections>
                         <outlet property="tableView" destination="NZ9-uo-aA0" id="i1N-n5-ZVr"/>
                     </connections>
@@ -66,7 +64,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="141" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uSz-qU-BKh">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="45" width="320" height="523"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CategoriesCell" rowHeight="141" id="NG0-Kk-yfC" customClass="CategoriesCell" customModule="Daily_Gifs" customModuleProvider="target">
@@ -102,26 +100,67 @@
                                     <outlet property="delegate" destination="8rJ-Kc-sve" id="fbP-zA-e1y"/>
                                 </connections>
                             </tableView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQt-AG-Dz3">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="bjQ-Ty-IpF">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bTU-bv-5GL">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="O1u-GQ-m0L">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <vibrancyEffect>
+                                                <blurEffect style="light"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="84e-Xx-vte"/>
+                                    <constraint firstAttribute="height" constant="64" id="jxK-5C-ZlJ"/>
+                                </constraints>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                            <searchBar contentMode="redraw" barStyle="black" placeholder="Search" translucent="NO" backgroundImage="transparent-square" translatesAutoresizingMaskIntoConstraints="NO" id="a3d-YJ-45c">
+                                <rect key="frame" x="0.0" y="19" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="Fqm-zw-Ibl"/>
+                                    <constraint firstAttribute="height" constant="44" id="e5y-aW-Luk"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="search"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="uSz-qU-BKh" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="Dnz-Mq-zGC"/>
-                            <constraint firstAttribute="trailing" secondItem="uSz-qU-BKh" secondAttribute="trailing" id="MQV-Vw-BJ3"/>
-                            <constraint firstAttribute="bottom" secondItem="uSz-qU-BKh" secondAttribute="bottom" id="Rlm-5s-UDx"/>
-                            <constraint firstItem="uSz-qU-BKh" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="jSO-PG-EBC"/>
+                            <constraint firstItem="zQt-AG-Dz3" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="01i-5d-1f5"/>
+                            <constraint firstItem="uSz-qU-BKh" firstAttribute="top" secondItem="zQt-AG-Dz3" secondAttribute="bottom" constant="-19" id="8w4-ck-s6S"/>
+                            <constraint firstItem="zQt-AG-Dz3" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="C65-0l-LKZ"/>
+                            <constraint firstItem="a3d-YJ-45c" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="H93-Md-TPZ"/>
+                            <constraint firstAttribute="bottom" secondItem="uSz-qU-BKh" secondAttribute="bottom" id="K8B-Bs-wYb"/>
+                            <constraint firstItem="a3d-YJ-45c" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" constant="19" id="KQO-rU-7j3"/>
+                            <constraint firstAttribute="trailing" secondItem="zQt-AG-Dz3" secondAttribute="trailing" id="Mhk-Pg-cu1"/>
+                            <constraint firstAttribute="trailing" secondItem="uSz-qU-BKh" secondAttribute="trailing" id="QOJ-hO-n8E"/>
+                            <constraint firstItem="uSz-qU-BKh" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="qQB-vm-XSv"/>
+                            <constraint firstAttribute="trailing" secondItem="a3d-YJ-45c" secondAttribute="trailing" id="vIm-aO-WfK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UBs-K8-yh6">
-                        <barButtonItem key="rightBarButtonItem" image="icon-Search" id="EPV-tw-D4c"/>
+                        <nil key="title"/>
                     </navigationItem>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="searchBar" destination="a3d-YJ-45c" id="GIM-8I-Qzp"/>
                         <outlet property="tableView" destination="uSz-qU-BKh" id="mx1-TR-iRg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
                 <customObject id="qig-Yi-wgc" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
-            <point key="canvasLocation" x="1747.5" y="333.80281690140845"/>
+            <point key="canvasLocation" x="1670.625" y="333.80281690140845"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="XLr-NS-cgc">
@@ -221,23 +260,29 @@
         <!--Find-->
         <scene sceneID="nXV-NK-fao">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k6u-kT-WDi" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M3d-ry-hmx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="k6u-kT-WDi" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Find" image="find" selectedImage="find_1" id="cPa-gy-q4n" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <connections>
                             <outlet property="animation" destination="qig-Yi-wgc" id="ymX-CF-SrW"/>
                         </connections>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="hZZ-1a-1xm">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="hZZ-1a-1xm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="oH0-He-2oB">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </toolbar>
                     <connections>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="Al7-nH-6Ah"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="M3d-ry-hmx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="333.80281690140845"/>
         </scene>
@@ -249,9 +294,9 @@
         <image name="find_1" width="23" height="23"/>
         <image name="home" width="23" height="23"/>
         <image name="home_1" width="23" height="23"/>
-        <image name="icon-Search" width="23" height="23"/>
         <image name="me" width="23" height="23"/>
         <image name="me_1" width="23" height="23"/>
+        <image name="transparent-square" width="50" height="50"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

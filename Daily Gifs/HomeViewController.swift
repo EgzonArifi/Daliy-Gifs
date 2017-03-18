@@ -14,6 +14,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @IBOutlet weak var tableView: UITableView!
     var viewModel = DailyGifsViewModel()
+    var category = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,14 +34,28 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.addInfiniteScroll { (tableView) -> Void in
             self.loadMore()
         }
+        if !category.isEmpty {
+            self.title = category
+        }
     }
     func loadMore() {
-        viewModel.loadHomeData { (Bool) in
-            self.tableView.reloadData()
-            self.tableView.finishInfiniteScroll()
+        if category.isEmpty {
+            viewModel.loadHomeData { (Bool) in
+                self.tableView.reloadData()
+                self.tableView.finishInfiniteScroll()
+            }
+        } else {
+            viewModel.loadSearchHomeData(category: category, completion: { (Bool) in
+                self.tableView.reloadData()
+                self.tableView.finishInfiniteScroll()
+            })
         }
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = false
+    }
     // MARK: UITableView DataSource and Delegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
