@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		774E1CAA1E7F2B680062A0B2 /* WishlistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774E1CA91E7F2B680062A0B2 /* WishlistViewModel.swift */; };
 		777BC8DF1E6B468F0049959F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777BC8DE1E6B468F0049959F /* AppDelegate.swift */; };
 		777BC8E11E6B468F0049959F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777BC8E01E6B468F0049959F /* HomeViewController.swift */; };
 		777BC8E31E6B468F0049959F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777BC8E21E6B468F0049959F /* SearchViewController.swift */; };
@@ -67,6 +68,7 @@
 /* Begin PBXFileReference section */
 		0AE3EBC1C43CE4CB30C79284 /* Pods-Daily GifsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily GifsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Daily GifsUITests/Pods-Daily GifsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7550C798892AA94F55053F2C /* Pods-Daily Gifs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily Gifs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Daily Gifs/Pods-Daily Gifs.release.xcconfig"; sourceTree = "<group>"; };
+		774E1CA91E7F2B680062A0B2 /* WishlistViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishlistViewModel.swift; sourceTree = "<group>"; };
 		777BC8DB1E6B468F0049959F /* Daily Gifs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily Gifs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		777BC8DE1E6B468F0049959F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		777BC8E01E6B468F0049959F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 			children = (
 				77E2CD511E740876003B3202 /* DailyGifsViewModel.swift */,
 				77884F1F1E7739D400993F21 /* SearchViewModel.swift */,
+				774E1CA91E7F2B680062A0B2 /* WishlistViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -640,6 +643,7 @@
 				777BC8E11E6B468F0049959F /* HomeViewController.swift in Sources */,
 				77E2CD501E720361003B3202 /* TabbarCustomization.swift in Sources */,
 				777BC9281E6B53F40049959F /* Original.swift in Sources */,
+				774E1CAA1E7F2B680062A0B2 /* WishlistViewModel.swift in Sources */,
 				77884F1E1E7739B200993F21 /* CategoriesCell.swift in Sources */,
 				777BC9221E6B53F40049959F /* Downsized.swift in Sources */,
 				777BC92F1E6C4EB50049959F /* Network.swift in Sources */,
