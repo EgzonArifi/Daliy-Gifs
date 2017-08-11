@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7743CDAB1F3E4AD000C37012 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7743CDAA1F3E4AD000C37012 /* Array.swift */; };
 		774E1CAA1E7F2B680062A0B2 /* WishlistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774E1CA91E7F2B680062A0B2 /* WishlistViewModel.swift */; };
 		777BC8DF1E6B468F0049959F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777BC8DE1E6B468F0049959F /* AppDelegate.swift */; };
 		777BC8E11E6B468F0049959F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777BC8E01E6B468F0049959F /* HomeViewController.swift */; };
@@ -68,6 +69,7 @@
 /* Begin PBXFileReference section */
 		0AE3EBC1C43CE4CB30C79284 /* Pods-Daily GifsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily GifsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Daily GifsUITests/Pods-Daily GifsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7550C798892AA94F55053F2C /* Pods-Daily Gifs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily Gifs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Daily Gifs/Pods-Daily Gifs.release.xcconfig"; sourceTree = "<group>"; };
+		7743CDAA1F3E4AD000C37012 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		774E1CA91E7F2B680062A0B2 /* WishlistViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishlistViewModel.swift; sourceTree = "<group>"; };
 		777BC8DB1E6B468F0049959F /* Daily Gifs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily Gifs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		777BC8DE1E6B468F0049959F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -293,8 +295,8 @@
 			isa = PBXGroup;
 			children = (
 				77E2CD571E743EA7003B3202 /* TimeAgo.swift */,
-				777BC9441E70B0990049959F /* Tabbar */,
 				777BC9311E6C83A70049959F /* Constants.swift */,
+				7743CDAA1F3E4AD000C37012 /* Array.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -306,13 +308,6 @@
 				77E2CD4F1E720361003B3202 /* TabbarCustomization.swift */,
 			);
 			name = Navigation;
-			sourceTree = "<group>";
-		};
-		777BC9441E70B0990049959F /* Tabbar */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Tabbar;
 			sourceTree = "<group>";
 		};
 		77884F1C1E77399B00993F21 /* Search Cells */ = {
@@ -657,6 +652,7 @@
 				777BC9231E6B53F40049959F /* DownsizedSmall.swift in Sources */,
 				77884F201E7739D400993F21 /* SearchViewModel.swift in Sources */,
 				77E2CD4B1E70B80C003B3202 /* HomeHeaderCell.swift in Sources */,
+				7743CDAB1F3E4AD000C37012 /* Array.swift in Sources */,
 				777BC9321E6C83A70049959F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

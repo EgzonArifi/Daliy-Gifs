@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 
 class DailyGifsViewModel: NSObject {
+
     var limit = 300
     var offset = 0
     var datasModel : [Data]!
@@ -39,6 +40,7 @@ class DailyGifsViewModel: NSObject {
         }
         offset += limit + 1
     }
+
     func loadSearchHomeData(category: String, completion: @escaping (Bool) -> Void) {
         Alamofire.request(SEARCH_URL+"&q=\(category .replacingOccurrences(of: " ", with: "+"))&limit=\(limit)&offset=\(offset)").validate().responseJSON { response in
             switch response.result {
@@ -60,21 +62,25 @@ class DailyGifsViewModel: NSObject {
         }
         offset += limit + 1
     }
+
     func numberOfSection() -> Int {
         if isEmpty() {
             return 2
         }
         return datasModel!.count
     }
+
     func dataModel(atIndex: Int) -> Data {
         return datasModel[atIndex]
     }
+
     func isEmpty() -> Bool {
         if  datasModel.count > 0 {
             return false
         }
         return true
     }
+
     func timeAgo(dateString: String) -> String {
         if dateString.isEmpty {
             return ""
