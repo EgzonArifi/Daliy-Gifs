@@ -15,6 +15,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     var viewModel = DailyGifsViewModel()
     var category = ""
+    let HomeGifTableViewCell = "HomeGifTableViewCell"
+    let HomeHeaderCell = "HomeHeaderCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +24,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 600
 
-        tableView.register(UINib(nibName: "HomeGifTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeGifTableViewCell")
-        tableView.register(UINib(nibName: "HomeHeaderCell", bundle: nil), forCellReuseIdentifier: "HomeHeaderCell")
+        tableView.register(UINib(nibName: HomeGifTableViewCell, bundle: nil), forCellReuseIdentifier: HomeGifTableViewCell)
+        tableView.register(UINib(nibName: HomeHeaderCell, bundle: nil), forCellReuseIdentifier: HomeHeaderCell)
         tableView.register(UINib(nibName: String(describing: HomeSkeletonCell.self), bundle: nil),
                            forCellReuseIdentifier: String(describing: HomeSkeletonCell.self))
 
@@ -77,7 +79,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             return cell
         }
         else {
-            let cell = self.tableView.dequeueReusableCell(withIdentifier: "HomeGifTableViewCell") as! HomeGifTableViewCell!
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: HomeGifTableViewCell) as! HomeGifTableViewCell!
             cell?.configureCell(model:self.viewModel.dataModel(atIndex: indexPath.section))
             cell?.timeAgo.text = self.viewModel.timeAgo(dateString:self.viewModel.dataModel(atIndex: indexPath.row).trendingDatetime)
             cell?.selectionStyle = UITableViewCellSelectionStyle.none
@@ -94,7 +96,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if self.viewModel.datasModel.count > 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "HomeHeaderCell") as! HomeHeaderCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: HomeHeaderCell) as! HomeHeaderCell
             cell.configureCell(model:self.viewModel.dataModel(atIndex: section))
             return cell
         }
